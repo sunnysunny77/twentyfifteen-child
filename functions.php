@@ -1,5 +1,6 @@
 <?php
 
+// load parent and child style sheet
 function twentyfifteen_child_enqueue_styles()
 {
 
@@ -14,3 +15,12 @@ function twentyfifteen_child_enqueue_styles()
 	);
 }
 add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
+
+//action to add meta data to head
+function twentyfifteen_child_add_meta_data()
+{
+?>
+  <meta name="keywords" content="Tafe, Wordpress, Child Theme">
+<?php
+}
+add_action('wp_head', 'twentyfifteen_child_add_meta_data');
