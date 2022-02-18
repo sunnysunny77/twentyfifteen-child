@@ -31,7 +31,7 @@ add_action('wp_head', 'twentyfifteen_child_add_meta_data');
 function twentyfifteen_child_singular_author($content)
 {
 
-	if (in_the_loop() && is_main_query() && is_singular()) {
+	if (in_the_loop() && is_main_query() && is_singular( 'post' )) {
 		$new_content = '<p id="author">Author: Daniel Costello</p>';
 		$content = $content . $new_content;
 		return $content;
