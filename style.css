@@ -7,3 +7,16 @@
  Version: 0.1
  */
  
+ body {
+    background: aliceblue;
+}
+
+body:before {
+    background-color: antiquewhite;
+    
+}
+
+.hentry, .site-info {
+    background-color: azure;
+}
+

@@ -36,7 +36,21 @@ function twentyfifteen_child_singular_author($content)
 		$content = $content . $new_content;
 		return $content;
 	}
-
 	return $content;
 }
 add_filter('the_content', 'twentyfifteen_child_singular_author', 1);
+
+
+//widget initialization
+function twentyfifteen_child_widget_init()
+{
+	register_sidebar(array(
+		'name' => 'Footer Wiget',
+		'id' => 'footer_widget',
+		'before_widget' => '<aside>',
+		'after_widget' => '</aside>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	));
+}
+add_action('widgets_init', 'twentyfifteen_child_widget_init');
