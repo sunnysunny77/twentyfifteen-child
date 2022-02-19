@@ -1,5 +1,22 @@
 <?php
 
+//edit custom logo
+if (!function_exists('twentyfifteen_the_custom_logo')) {
+
+	function twentyfifteen_the_custom_logo()
+	{
+		if (function_exists('the_custom_logo')) {
+?>
+			<label>
+				<?php
+				the_custom_logo();
+				?>
+				The Author</label>
+	<?php
+		}
+	}
+}
+
 // load parent and child style sheet
 function twentyfifteen_child_enqueue_styles()
 {
@@ -20,7 +37,7 @@ add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 function twentyfifteen_child_add_meta_data()
 {
 
-?>
+	?>
 	<meta name="keywords" content="Tafe, Wordpress, Child Theme">
 <?php
 }
@@ -31,7 +48,7 @@ add_action('wp_head', 'twentyfifteen_child_add_meta_data');
 function twentyfifteen_child_singular_author($content)
 {
 
-	if (in_the_loop() && is_main_query() && is_singular( 'post' )) {
+	if (in_the_loop() && is_main_query() && is_singular('post')) {
 		$new_content = '<p id="author">Author: Daniel Costello</p>';
 		$content = $content . $new_content;
 		return $content;
