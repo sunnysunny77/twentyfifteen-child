@@ -15,7 +15,6 @@ function twentyfifteen_child_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 
-
 // plug theme setup to remover comment-list html 5 support
 if (!function_exists('twentyfifteen_setup')) :
 	/**
