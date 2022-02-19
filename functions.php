@@ -16,41 +16,36 @@ function twentyfifteen_child_enqueue_styles()
 add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 
 //remove html 5 comment list after parent at 11
-if (!function_exists('twentyfifteen_the_remove_setup')) {
-	function twentyfifteen_the_remove_setup()
-	{
+function twentyfifteen_the_remove_setup()
+{
 
-		remove_theme_support('html5');
-		add_theme_support(
-			'html5',
-			array(
-				'search-form',
-				'comment-form',
-				'gallery',
-				'caption',
-				'script',
-				'style',
-				'navigation-widgets',
-			)
-		);
-	}
+	remove_theme_support('html5');
+	add_theme_support(
+		'html5',
+		array(
+			'search-form',
+			'comment-form',
+			'gallery',
+			'caption',
+			'script',
+			'style',
+			'navigation-widgets',
+		)
+	);
 }
 add_action('after_setup_theme', 'twentyfifteen_the_remove_setup', 11);
 
 //edit custom logo
-if (!function_exists('twentyfifteen_the_custom_logo')) {
-
-	function twentyfifteen_the_custom_logo()
-	{
-		if (function_exists('the_custom_logo')) {
+function twentyfifteen_the_custom_logo()
+{
+	if (function_exists('the_custom_logo')) {
 ?>
-			<label>
-				<?php
-				the_custom_logo();
-				?>
-				The Author</label>
+		<label>
+			<?php
+			the_custom_logo();
+			?>
+			The Author</label>
 	<?php
-		}
 	}
 }
 
