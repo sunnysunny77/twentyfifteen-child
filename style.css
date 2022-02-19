@@ -7,13 +7,12 @@
  Version: 0.1
  */
  
- body {
+body {
     background: aliceblue;
 }
 
 body:before {
     background-color: antiquewhite;
-    
 }
 
 .hentry, .site-info {
