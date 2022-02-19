@@ -267,8 +267,8 @@ function twentyfifteen_child_widget_init()
 		'id' => 'footer_widget',
 		'before_widget' => '<aside>',
 		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_title' => '<h2 class="widget-title">',
+		'after_title' => '</h2>',
 	));
 }
 add_action('widgets_init', 'twentyfifteen_child_widget_init');
