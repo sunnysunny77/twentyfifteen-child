@@ -19,6 +19,7 @@ add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 function twentyfifteen_the_remove_setup()
 {
 
+	remove_action( 'widgets_init', 'twentyfifteen_widgets_init' ); 
 	remove_theme_support('html5');
 	add_theme_support(
 		'html5',
