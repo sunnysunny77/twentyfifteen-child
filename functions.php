@@ -15,7 +15,7 @@ function twentyfifteen_child_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 
-//remove html 5 comment list after parent at 11
+//remove html 5 comment list and widget after parent at 11
 function twentyfifteen_the_remove_setup()
 {
 
