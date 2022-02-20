@@ -19,7 +19,7 @@ body:before {
     background-color: azure;
 }
 
-.main-navigation .current-menu-item > h2 a, .main-navigation .current-menu-ancestor > h2 a {
+.main-navigation .current-menu-item > h2 a {
     font-weight: 700;
 }
 
