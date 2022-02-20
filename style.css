@@ -26,3 +26,7 @@ body:before {
 .main-navigation h2 {
     font-weight: unset;
 }
+
+.comment div {
+	padding: 0.5em 0;
+}
