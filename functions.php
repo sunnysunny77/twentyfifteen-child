@@ -19,7 +19,7 @@ add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 function twentyfifteen_the_remove_setup()
 {
 
-	remove_action( 'widgets_init', 'twentyfifteen_widgets_init' ); 
+	remove_action('widgets_init', 'twentyfifteen_widgets_init');
 	remove_theme_support('html5');
 	add_theme_support(
 		'html5',
@@ -62,9 +62,9 @@ function twentyfifteen_child_widget_init()
 		'name' => 'Footer Wiget',
 		'id' => 'footer_widget',
 		'before_widget' => '',
-        'after_widget'  => '',
-        'before_title'  => '',
-        'after_title'   => '',
+		'after_widget'  => '',
+		'before_title'  => '',
+		'after_title'   => '',
 	));
 }
 add_action('widgets_init', 'twentyfifteen_child_widget_init');
