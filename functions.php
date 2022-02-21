@@ -15,7 +15,7 @@ function twentyfifteen_child_enqueue_styles()
 }
 add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 
-//remove html 5 comment list and widget after parent at 11
+//remove  widget and edit html5 support after parent at 11
 function twentyfifteen_the_remove_setup()
 {
 
@@ -24,13 +24,8 @@ function twentyfifteen_the_remove_setup()
 	add_theme_support(
 		'html5',
 		array(
-			'search-form',
-			'comment-form',
-			'gallery',
-			'caption',
 			'script',
 			'style',
-			'navigation-widgets',
 		)
 	);
 }
@@ -66,10 +61,10 @@ function twentyfifteen_child_widget_init()
 	register_sidebar(array(
 		'name' => 'Footer Wiget',
 		'id' => 'footer_widget',
-		'before_widget' => '<aside>',
-		'after_widget' => '</aside>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'before_widget' => '',
+        'after_widget'  => '',
+        'before_title'  => '',
+        'after_title'   => '',
 	));
 }
 add_action('widgets_init', 'twentyfifteen_child_widget_init');
