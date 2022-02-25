@@ -14,11 +14,11 @@
 </div><!-- .site-content -->
 
 <footer id="colophon" class="site-footer">
-	<div class="site-info">
+	<ul class="site-info">
 
 		<?php if (dynamic_sidebar('footer_widget')) : else : endif; ?>
 
-	</div><!-- .site-info -->
+	</ul><!-- .site-info -->
 </footer><!-- .site-footer -->
 
 </div><!-- .site -->
