@@ -43,3 +43,7 @@ body:before {
 .comment div {
 	padding: 0.5em 0;
 }
+
+.post-navigation .meta-nav {
+    color: rgba(51, 51, 51, 0.9);
+}
