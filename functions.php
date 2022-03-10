@@ -16,7 +16,7 @@ function twentyfifteen_child_enqueue_styles()
 add_action('wp_enqueue_scripts', 'twentyfifteen_child_enqueue_styles');
 
 //remove  widget and edit html5 support after parent at 11
-function twentyfifteen_the_remove_setup()
+function twentyfifteen_child_remove_setup()
 {
 
 	remove_action('widgets_init', 'twentyfifteen_widgets_init');
@@ -29,7 +29,7 @@ function twentyfifteen_the_remove_setup()
 		)
 	);
 }
-add_action('after_setup_theme', 'twentyfifteen_the_remove_setup', 11);
+add_action('after_setup_theme', 'twentyfifteen_child_remove_setup', 11);
 
 //edit custom logo
 function twentyfifteen_the_custom_logo()
